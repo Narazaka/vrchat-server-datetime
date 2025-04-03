@@ -12,11 +12,11 @@
  */
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		const t = `${new Date().getTime()}0000`; // 100 ns unit (C# DateTime.Ticks)
-		if (request.url.endsWith(".json")) {
-			return new Response(`{"t":${t}}`);
-		}
-		return new Response(t);
-	},
+  async fetch(request, env, ctx): Promise<Response> {
+    const t = `${new Date().getTime()}0000`; // 100 ns unit (C# DateTime.Ticks)
+    if (request.url.endsWith(".json")) {
+      return new Response(`{"t":${t}}`);
+    }
+    return new Response(t);
+  },
 } satisfies ExportedHandler<Env>;
