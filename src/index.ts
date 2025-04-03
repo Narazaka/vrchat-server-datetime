@@ -12,7 +12,7 @@
  */
 
 export default {
-  async fetch(request, env, ctx): Promise<Response> {
+  fetch(request, env, ctx) {
     // 100 ns unit (C# DateTime.Ticks)
     return new Response(`${Date.now()}0000`);
   },
